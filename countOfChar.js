@@ -6,9 +6,10 @@
 // map allows object as keys but object does not
 
 const str = "aaaaaabbcc"
+
+// Solution 1 : 
 const map = new Map()
 let res = ""
-
 for(let char of str){
     if(map.get(char)){
         let count = map.get(char)
@@ -18,7 +19,21 @@ for(let char of str){
     }
 }
 console.log(map)
-for(let [keys,values] of map){
+for(let [keys,values] of map){     //we can use for...of loop in Map but not in object
     res = res + keys + values
 }
 console.log(res)
+
+// Solution 2 : 
+const countObj = {}
+for(let elem of str){
+    if(countObj[elem]){
+        countObj[elem]++
+    }else{
+        countObj[elem] = 1
+    }
+}
+console.log(countObj)
+for(let key in countObj){
+    console.log(`${key}${countObj[key]}`)
+}
