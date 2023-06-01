@@ -7,5 +7,5 @@ console.log([...mySet])
 console.log(mySet.has('1'))
 console.log(mySet.has(1002))
 console.log(mySet.has(obj)) //Object reference are same
-console.log(mySet.has({country:"India",name:"Kolkata"}))
+console.log(mySet.has({country:"India",name:"Kolkata"}))  //Object reference are different
 console.log(mySet.size)
