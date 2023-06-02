@@ -40,3 +40,21 @@ const p1 = person  //This means that now both p1 & person is refering to the sam
 person.firstName = "Rohan"
 console.log(p1,person) //same coz while copying variable 
 // value gets copied,but copying objects means location gets copied
+
+// ---------------------------------------------------------------------------------
+// Guess the output
+
+function test(){
+  var x = "UncommonGeeks"
+  if(x === "UncommonGeeks"){
+    var x = "Vasanth"
+    console.log("Value of first x :",x);
+  }
+  console.log("Value of second x :",x);
+}
+
+test()
+
+// Ans : 
+// Value of first x : Vasanth
+// Value of second x : Vasanth
