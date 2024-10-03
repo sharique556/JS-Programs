@@ -1,6 +1,6 @@
 // Task is to get the roll no array afer 2 secs
-// To get the name of secod roll num after 2 secs
-// to get the info of that student
+// To get the name of second roll num after 2 secs
+// to get the info of that student after 2 secs
 
 const rollArr = [30,31,32,33,34,35]
 

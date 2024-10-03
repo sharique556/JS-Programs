@@ -58,3 +58,39 @@ test()
 // Ans : 
 // Value of first x : Vasanth
 // Value of second x : Vasanth
+
+// ---------------------------------------------------------------------------------
+
+let obj1 = {};
+
+function A() {
+    this.name = "A is the name";
+    return obj1;
+}
+
+function B() {
+    this.name = "B is the name";
+    return obj1;
+}
+
+console.log(new A()==new B())  
+// result  : true
+
+// ----------------------------------------------------------------------------
+
+let obj2 = {};
+
+function A() {
+    this.name = "A is the name";
+    return;
+}
+
+function B() {
+    this.name = "B is the name";
+    return;
+}
+
+console.log(new A()==new B())  
+// result  : false
+
+// ------------------------------------------------------------------------
