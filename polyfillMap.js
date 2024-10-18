@@ -1,18 +1,18 @@
 // Polyfill for map
-
-// arr.map((elem,i.arr)=>{})
+// map(elem,index,array)
 
 const num = [1,2,3,4,5]
 
 Array.prototype.myMap = function(cb) {
+    let arr = this;
     let temp = []
-    for(let i=0; i<this.length; i++){
-        temp.push(cb(this[i],i,this))
+    for(let i=0; i<arr.length; i++){
+        temp.push(cb(arr[i],i,arr))
     }
     return temp
 }
 
-const result1 = num.myMap((elem)=>{
+const tripleArr = num.myMap((elem)=>{
  return elem * 3
 })
-console.log(result1)
+console.log(tripleArr)
