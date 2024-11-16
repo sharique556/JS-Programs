@@ -16,3 +16,5 @@ function sum(...args){
 sum(1,2,3)
 sum(1)(2,3)
 sum(1)(2)(3)
+
+// Variations "1_2_3"
