@@ -7,7 +7,7 @@ const num = [1,2,3,4,5]
 Array.prototype.myFilter = function(cb){
     let temp = []
     for(let i=0;i<this.length;i++){
-        if(cb(this[i],i,this)){
+        if(cb(this[i],i,this)){   //here cb taking 3 arguments just like filter callback : elem,index,array
             temp.push(this[i])
         }
     }

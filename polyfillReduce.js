@@ -16,11 +16,11 @@ Array.prototype.myReduce = function(cb,initialValue){
 const sum = num.myReduce((acc,currVal)=>{
     acc += currVal
     return acc
-})
+},0)
 
 const sentence = str.myReduce((acc,currVal)=>{
     acc = `${acc} ${currVal}`
     return acc
-})
+},"")
 console.log(sum)
 console.log(sentence)

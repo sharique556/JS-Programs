@@ -7,22 +7,33 @@
     // return 0
     // })   //for sorting words
 
-let str = "I love programming in Javascript";
+// let str = "I love programming in Javascript";
 
-function findLongestWord(str){
-    str = str.split(" ")
-    let arr = str.map((elem)=>{
-        return{
-            length : elem?.length,
-            wrd : elem
-        }
-    });
-     let newArr = arr.sort((a,b)=>{
-        return a.length - b.length
-     })
+// function findLongestWord(str){
+//     str = str.split(" ")
+//     let arr = str.map((elem)=>{
+//         return{
+//             length : elem?.length,
+//             wrd : elem
+//         }
+//     });
+//      let newArr = arr.sort((a,b)=>{
+//         return a.length - b.length
+//      })
 
-     return newArr[newArr.length-2].wrd
+//      return newArr[newArr.length-2].wrd
     
-}
+// }
 
-console.log("Longest word",findLongestWord(str))
+// console.log("Longest word",findLongestWord(str))
+
+const arr = ["blue","apple","ad","dog","cat"];
+arr.sort((a,b)=>{
+    if(a<b){
+        return -1
+    }else{
+        return 1
+    }
+})
+
+console.log(arr) 
