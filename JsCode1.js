@@ -28,39 +28,51 @@
 
 // ----------------------------------------------------------------------------
 // Find o/p
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    address : {
-      city : "Delhi"
-    }
-};
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     address : {
+//       city : "Delhi"
+//     }
+// };
 
 
-const p1 = person
-person.firstName = "Rohan"
-console.log(p1,person) //same coz while copying variable 
+// const p1 = person
+// person.firstName = "Rohan"
+// console.log(p1,person) //same coz while copying variable 
 // value gets copied,but copying objects means location gets copied
 
 // --------------------------------------------------------------------------
 
-const a = {};
-const b = {key : 'b'};
-const c = {key : 'c'};
+// const a = {};
+// const b = {key : 'b'};
+// const c = {key : 'c'};
 
-a[b] = 123;  //""+[object Object] = "[object Object]"
-a[c] = 456;  //""+[object Object] = "[object Object]"
+// a[b] = 123;  //""+[object Object] = "[object Object]"
+// a[c] = 456;  //""+[object Object] = "[object Object]"
 
-console.log(a[b]===a[c])   //true
+// console.log(a[b]===a[c])   //true
 
 // Keys/Property of an object are string, but here it is an object i.e [object Object]
 // So ""+[object Object] = "[object Object]" (string)
 
 // ---------------------------------------------------------------------------------
 
-function x({y=5}){      //If it would have been without curly braces then y will be having valye 2
-  console.log(y)
-}
+// function x({y=5}){      //If it would have been without curly braces then y will be having valye 2
+//   console.log(y)
+// }
 
-let y=2;
-x(2)
+// let y=2;
+// x(2)
+
+// ---------------------------------------------------------------------
+
+console.log(NaN==NaN);
+console.log(NaN===NaN);
+console.log(Object.is(NaN,NaN));
+console.log(-0===+0);
+console.log(Object.is(-0,0));
+
+
+// Object.is(first,second) is same as === with two exceptions
+// which is for Object.is(NaN,NaN) & Object.is(-0,0)
