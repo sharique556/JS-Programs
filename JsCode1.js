@@ -76,3 +76,11 @@ console.log(Object.is(-0,0));
 
 // Object.is(first,second) is same as === with two exceptions
 // which is for Object.is(NaN,NaN) & Object.is(-0,0)
+
+// ------------------------------------------------------------------------------------
+
+let obj = {a : 1};
+let ref = obj; // Here ref is referring to same object obj
+ref.a = 2; //here we are indireectly manipulating object obj
+ref = {a:3}; //Now this 'ref' is referring to some different object
+console.log(obj.a,ref.a);
