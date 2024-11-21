@@ -16,7 +16,6 @@
 // [x,y] = [y,x]
 // console.log(x,y);
 
-
 // ---------------------------------------------------------------------------
 
 // 3) Terminating array upto 3 elements 
@@ -91,10 +90,51 @@ const userName = null;
 const defaultName = "Guest";
 
 console.log(userName ?? defaultName);   // Guest
-console.log(userName && defaultName);    // null '&&' operator always search for falsey expression first if not find, gives last expression
-console.log(userName || defaultName);   //Guest '||' operator always search for truthy expression first if not find, gives last expression
-
-
-
+console.log(userName && defaultName);    // null,'&&' operator always search for falsey expression first if not find, gives last expression
+console.log(userName || defaultName);   //Guest,'||' operator always search for truthy expression first if not find, gives last expression
 console.log(null && 0 && "" && undefined && "Hello");
 console.log(null || 0 || "" || undefined || "Hello");
+
+//-----------------------------------------------------------------------------------
+
+console.log(typeof null);  //typeof null is object
+console.log(typeof undefined);  //typeof undefined is undefined
+
+//------------------------------------------------------------------------------------
+
+// Input
+const nestedObject = {
+    a: {
+        b: {
+            c: 1,
+            d: 2,
+        },
+        e: 3,
+    },
+    f: 4,
+};
+
+function flattenObject(obj,parentKey="",result={}){
+    for(let key in obj){
+        const fullKey = parentKey ? `${parentKey}.${key}` : key;
+        if(typeof obj[key] ==="object" && 
+            !Array.isArray(obj[key]) &&
+            obj[key] !== null
+        ){
+            flattenObject(obj[key],fullKey,result)
+        }else{
+            result[fullKey] = obj[key]
+        }
+    }
+    return result
+}
+
+
+console.log(flattenObject(nestedObject))
+
+// Output
+//   {
+//     a.b.c : "1",
+//     a.e:"3",
+//     f:"4"
+//   }
