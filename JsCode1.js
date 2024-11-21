@@ -84,3 +84,17 @@ let ref = obj; // Here ref is referring to same object obj
 ref.a = 2; //here we are indireectly manipulating object obj
 ref = {a:3}; //Now this 'ref' is referring to some different object
 console.log(obj.a,ref.a);
+
+//-----------------------------------------------------------------------------------------
+
+const userName = null;
+const defaultName = "Guest";
+
+console.log(userName ?? defaultName);   // Guest
+console.log(userName && defaultName);    // null '&&' operator always search for falsey expression first if not find, gives last expression
+console.log(userName || defaultName);   //Guest '||' operator always search for truthy expression first if not find, gives last expression
+
+
+
+console.log(null && 0 && "" && undefined && "Hello");
+console.log(null || 0 || "" || undefined || "Hello");
