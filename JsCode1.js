@@ -106,4 +106,7 @@ function x(a,b=5){
     return a+b;
 }
 console.log(x(3,undefined))  // Output is 8
-// If second args is false, then function will take default paramter
+// If second args is undefined, then function will take default paramter
+console.log(x(3,null))  // But here Output is 3
+console.log(x(3,"")) // Here also its 3
+console.log(typeof null)  //typeof object is null
