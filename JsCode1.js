@@ -110,3 +110,19 @@ console.log(x(3,undefined))  // Output is 8
 console.log(x(3,null))  // But here Output is 3
 console.log(x(3,"")) // Here also its 3
 console.log(typeof null)  //typeof object is null
+
+// ----------------------------------------------------------------------------------------
+
+const obj1 = {
+    a : 1
+}
+
+const obj2 = {
+    a:2,
+    b:3
+}
+
+const objFinal = {...obj1,...obj2};
+console.log(objFinal);
+
+// output : { a: 2, b: 3 }  value of 'a' has been referenced
