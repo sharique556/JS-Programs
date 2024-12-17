@@ -126,3 +126,14 @@ const objFinal = {...obj1,...obj2};
 console.log(objFinal);
 
 // output : { a: 2, b: 3 }  value of 'a' has been referenced
+
+// ----------------------------------------------------------------------------------------------
+
+console.log(1+"2"+"3"); //123
+console.log(1+2+"3");  //33
+console.log(a=b=5);  //5
+console.log([] + []); // ""
+console.log([] + {}); // [object Object]
+console.log({} + []); // [object Object]
+console.log([]==[]); //false -  The Abstract Equality Comparison Algorithm
+ 
