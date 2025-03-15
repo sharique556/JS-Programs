@@ -12,3 +12,16 @@ let intervalId = setInterval(() => {
   setTimeout(() => {
     clearInterval(intervalId);
   }, 7000);
+
+  // Log number from 1 to 10 in each 1 second intervals using setInterval
+
+  function logNumbers(){
+    let number = 1;
+    let timer = setInterval(() => {
+        console.log(number);
+        if(number==10) clearInterval(timer)
+        number++;
+    },1000);
+}
+
+logNumbers()

@@ -14,18 +14,14 @@ let worker = {
     }
   };
 
-//   worker.slow(4)
-//   worker.slow(4)
-//   worker.slow(4)
-
-
   function cachingDecorators(fun){
     let cache = new Map();
     return function(x){
         if(cache.has(x)){
             return cache.get(x)
         }
-
+        // let val = fun(x)  / Unlike previous, it will not work simply, we need to bind func(borrowerMethod)
+        // to this(borrowerObject)
         let val = fun.call(this,x)
         cache.set(x,val)
         return val

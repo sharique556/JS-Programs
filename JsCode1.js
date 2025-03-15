@@ -92,8 +92,8 @@ const defaultName = "Guest";
 console.log(userName ?? defaultName);   // Guest
 console.log(userName && defaultName);    // null,'&&' operator always search for falsey expression first if not find, gives last expression
 console.log(userName || defaultName);   //Guest,'||' operator always search for truthy expression first if not find, gives last expression
-console.log(null && 0 && "" && undefined && "Hello");
-console.log(null || 0 || "" || undefined || "Hello");
+console.log(null && 0 && "" && undefined && "Hello"); // null
+console.log(null || 0 || "" || undefined || "Hello");  // Hello
 
 //-----------------------------------------------------------------------------------
 
@@ -135,5 +135,5 @@ console.log(a=b=5);  //5
 console.log([] + []); // ""
 console.log([] + {}); // [object Object]
 console.log({} + []); // [object Object]
-console.log([]==[]); //false -  The Abstract Equality Comparison Algorithm
+console.log([]==[]); //false -  The Abstract Equality Comparison Algorithm, same with {} == {}
  

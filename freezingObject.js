@@ -11,9 +11,10 @@ function deepFreeze(obj){
 const user = { name: "Alice", details : { age:30 }};
 Object.freeze(user);
 user.name = "Box";
-// user.details.age = 23;
-// console.log("with in-built freeze",user);
+user.details.age = 23;
+console.log("with in-built freeze",user);
 deepFreeze(user);
+user.details.age = 45;
 console.log("With deep freeze",user);
 
 
